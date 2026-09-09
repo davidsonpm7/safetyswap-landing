@@ -1,0 +1,27 @@
+SafetySwap - mudanças da landing page de waitlist
+====================================================
+
+Como aplicar no projeto dele (pasta safetyswap-app):
+
+1. DELETAR a pasta antiga (não existe mais, foi substituída):
+   src/modules/landing/
+
+2. COLAR/SOBRESCREVER estes arquivos (mantendo os mesmos caminhos):
+   - .gitignore
+   - src/app/page.tsx
+   - src/app/api/leads/route.ts
+   - src/modules/waitlist/  (pasta inteira, é tudo novo)
+   - src/shared/lib/leads-db.ts
+   - src/shared/types/node-sqlite.d.ts
+   - src/shared/components/layout/FloatingActions/index.tsx
+   - src/shared/components/ui/Button/Button.variants.ts
+   - src/shared/styles/global.css
+   - src/shared/utils/masks.ts
+
+3. Rodar normalmente:
+   npm run dev
+
+Observação: o banco leads.db é criado sozinho na raiz do projeto na
+primeira vez que o servidor sobe. Não precisa criar nada manualmente.
+Requer Node.js 22.5+ (o módulo node:sqlite é nativo do Node, sem precisar
+instalar nada extra).
