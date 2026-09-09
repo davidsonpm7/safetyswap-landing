@@ -37,7 +37,7 @@ yarn-error.log*
 .vercel
 
 # waitlist leads database (local, created automatically)
-/leads.db
+/data/
 
 # typescript
 *.tsbuildinfo

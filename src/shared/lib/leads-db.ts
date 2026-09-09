@@ -1,9 +1,11 @@
+import fs from "node:fs";
 import path from "node:path";
 import { DatabaseSync } from "node:sqlite";
 
 export const FOUNDER_SLOTS = 10;
 
-const DB_PATH = path.join(process.cwd(), "leads.db");
+const DATA_DIR = path.join(process.cwd(), "data");
+const DB_PATH = path.join(DATA_DIR, "leads.db");
 
 let db: DatabaseSync | null = null;
 
@@ -11,6 +13,8 @@ function getDb(): DatabaseSync {
   if (db) {
     return db;
   }
+
+  fs.mkdirSync(DATA_DIR, { recursive: true });
 
   const instance = new DatabaseSync(DB_PATH);
 

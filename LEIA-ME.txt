@@ -12,6 +12,6 @@ Como rodar:
 Requer Node.js 22.5+ (o módulo node:sqlite é nativo do Node, sem precisar
 instalar nada extra).
 
-Observação: o banco leads.db é criado sozinho na raiz do projeto na
+Observação: o banco data/leads.db é criado sozinho (pasta incluída) na
 primeira vez que o servidor sobe. Não precisa criar nada manualmente, e
 ele nunca é commitado (está no .gitignore).
